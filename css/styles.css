@@ -1,3 +1,7 @@
+body{
+    background-color: rgb(167, 36, 36);
+}
+
 header h1{
     color: red;
     text-align: center;
