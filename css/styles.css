@@ -1,4 +1,4 @@
-header h1{
+h1{
     color: red;
     text-align: center;
     font-family: 'Raleway', sans-serif;;
@@ -66,14 +66,15 @@ footer h2{
     font-family: 'Raleway', sans-serif;
 }
 
-body{
-    background-image: url(../img/escudo.png);
-    background-repeat: no-repeat;
-    background-size: 110px;
+.escudo{
+    display: flex;
+    justify-content: center;
+    height: 150px;
 }
 
 header div{
     display: flex;
+    justify-content: baseline;
 }
 
 .titulo{
@@ -246,7 +247,91 @@ footer{
     font-weight: bold
 }
 
-.navhome{
-    margin: 0px 0px 0px 60px;
-    padding: 0px 0px 0px 60px;
+
+@media (max-width: 600px) and (min-width: 280px){
+    .deporteuno{
+        display: flex;
+        flex-direction: column;
+    }
+    .deportedos{
+        display: flex;
+        flex-direction: column;
+    }
+    .deportetres{
+        display: flex;
+        flex-direction: column;
+    }
+}    
+@media (max-width: 1024px) and (min-width: 600px){
+    .deporteuno{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "futbol basquet" "ciclismo golf";
+    }
+    .deportedos{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "tenis esqui" "hockey voley";
+    }
+    .deportetres{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "natacion rugby" "boxeo gimnasia";
+    }
+}
+
+.futbol{
+    grid-area: futbol;
+}
+
+.ciclismo{
+    grid-area: ciclismo;
+}
+
+.tenis{
+    grid-area: tenis;
+}
+
+.hockey{
+    grid-area: hockey;
+}
+
+.natacion{
+    grid-area: natacion;
+    height: 210px;
+    
+}
+
+.boxeo{
+    grid-area: boxeo;
+}
+
+.basquet{
+    grid-area: basquet;
+}
+
+.esqui{
+    grid-area: esqui;
+}
+
+.gimnasia{
+    grid-area: gimnasia;
+}
+
+.rugby{
+    grid-area: rugby;
+}
+
+.golf{
+    grid-area: golf;
+}
+
+.voley{
+    grid-area: voley;
 }
