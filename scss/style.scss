@@ -1,0 +1,27 @@
+@import "utilities/variables";
+
+.titulo{
+    color: $color-letras;
+    background-color: $color-fondos;
+}
+
+footer{
+    background-color: $color-fondos;
+    h2{
+        color:$color-letras;
+    }
+    ul{
+        list-style: none;
+        li{
+            background-color: $color-fondos;
+        }
+    }
+    
+}
+
+header{
+    background-color: $color-fondos;
+    p{
+        color: $color-letras;
+    }
+}
