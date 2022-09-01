@@ -1,17 +1,265 @@
-.titulo {
-  color: red;
-  background-color: black; }
+.escudo {
+  display: flex;
+  justify-content: center;
+  height: 150px; }
 
-footer {
-  background-color: black; }
-  footer h2 {
-    color: red; }
-  footer ul {
-    list-style: none; }
-    footer ul li {
-      background-color: black; }
+h1 {
+  color: red;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 65px;
+  font-weight: bold; }
+
+header img {
+  max-width: 250px;
+  max-height: 250px; }
+
+header h2 {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  background-color: black;
+  display: flex;
+  justify-content: flex-start; }
+
+header h3 {
+  font-size: 20px; }
+
+header h4 {
+  font-size: 20px; }
+
+header h5 {
+  font-size: 20px; }
+
+footer ul {
+  list-style: none;
+  color: red;
+  font-size: 17px; }
+
+header nav ul {
+  background-color: red;
+  color: whitesmoke;
+  font-size: 19px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+header nav ul li {
+  background-color: red;
+  padding: 8px; }
+
+header nav ul li:hover {
+  background-color: white;
+  box-shadow: 1px 1px 20px black;
+  border-radius: 10px;
+  transform: scale(1.1, 1.1); }
+
+footer h2 {
+  background-color: black;
+  color: white;
+  font-family: 'Raleway', sans-serif; }
+
+header div {
+  display: flex;
+  justify-content: baseline; }
+
+.titulo {
+  background-color: red;
+  text-align: center; }
+
+.estadio {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr 0.5fr;
+  grid-template-areas: "header header header header" "main main section section" "footer footer footer footer"; }
 
 header {
+  grid-area: header;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  justify-self: center; }
+
+main {
+  grid-area: main;
+  align-self: center;
+  justify-self: center; }
+
+section {
+  grid-area: section;
+  align-self: center;
+  justify-self: center; }
+
+footer {
+  grid-area: footer; }
+
+.estadio header p {
+  font-size: 18px; }
+
+.tituloh {
+  background-color: red;
+  text-align: center; }
+
+.historia {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "headerh headerh headerh headerh" "mainh mainh sectionh sectionh" "footerh footerh footerh footerh"; }
+
+.historia header {
+  grid-area: headerh; }
+
+.historia main {
+  grid-area: mainh; }
+
+.historia section {
+  grid-area: sectionh; }
+
+.historia footer {
+  grid-area: footerh; }
+
+.historia header p {
+  font-size: 18px; }
+
+.socios {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 0.5fr;
+  grid-template-areas: "headers headers" "mains sections" "footers footers"; }
+
+.socios header {
+  grid-area: headers; }
+
+.socios main {
+  grid-area: mains; }
+
+.socios section {
+  grid-area: sections; }
+
+.socios footer {
+  grid-area: footers; }
+
+.socios header p {
+  font-size: 18px; }
+
+.socios main p {
+  font-size: 18px; }
+
+.socios main h2 {
+  background-color: red; }
+
+.socios header ul {
+  list-style-position: inside;
+  justify-content: flex-start;
+  font-size: 18px; }
+
+@media screen and (max-width: 1024px) {
+  .estadio {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-areas: "header header" "main main" "section section" "footer footer"; }
+  .historia {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-areas: "headerh headerh" "mainh mainh" "sectionh sectionh" "footerh footerh"; }
+  .socios {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-areas: "headers headers" "mains mains" "sections sections" "footers footers"; } }
+
+.contacto form fieldset legend {
+  background-color: red;
+  font-size: 20px;
+  font-weight: bold; }
+
+.contacto form fieldset div {
+  font-size: 17px;
+  font-weight: bold; }
+
+@media (max-width: 600px) and (min-width: 280px) {
+  .deporteuno {
+    display: flex;
+    flex-direction: column; }
+  .deportedos {
+    display: flex;
+    flex-direction: column; }
+  .deportetres {
+    display: flex;
+    flex-direction: column; } }
+
+@media (max-width: 1024px) and (min-width: 600px) {
+  .deporteuno {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "futbol basquet" "ciclismo golf"; }
+  .deportedos {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "tenis esqui" "hockey voley"; }
+  .deportetres {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "natacion rugby" "boxeo gimnasia"; } }
+
+.futbol {
+  grid-area: futbol; }
+
+.ciclismo {
+  grid-area: ciclismo; }
+
+.tenis {
+  grid-area: tenis; }
+
+.hockey {
+  grid-area: hockey; }
+
+.natacion {
+  grid-area: natacion;
+  height: 210px; }
+
+.boxeo {
+  grid-area: boxeo; }
+
+.basquet {
+  grid-area: basquet; }
+
+.esqui {
+  grid-area: esqui; }
+
+.gimnasia {
+  grid-area: gimnasia; }
+
+.rugby {
+  grid-area: rugby; }
+
+.golf {
+  grid-area: golf; }
+
+.voley {
+  grid-area: voley; }
+
+legend {
+  width: 1000px;
+  height: 50px;
+  color: white; }
+
+label {
+  color: red; }
+
+fieldset {
   background-color: black; }
-  header p {
-    color: red; }
