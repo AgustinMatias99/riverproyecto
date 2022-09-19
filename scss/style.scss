@@ -1,86 +1,88 @@
-@import "base/mixin";
 @import "base/listas";
 @import "base/extend";
 
 h1{
-    color: red;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;;
-    font-size: 65px;
-    font-weight: bold;
-}
-
-header img{
-    max-width: 250px;
-    max-height: 250px;
-}
-
-header h2{
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    background-color: black;
-    display: flex;
-    justify-content: flex-start;
-}
-
-header h3{
-    font-size: 20px;
-
-}
-
-header h4{
-    font-size: 20px;
-}
-
-header h5{
-    font-size: 20px;
-}
-
-footer ul{
-    list-style: none;
-    color: red;
-    font-size: 17px;
-}
-
-header nav ul{
-    background-color: red;
-    color:whitesmoke;
-    font-size: 19px;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-header nav ul li{
-    background-color: red;
-    padding: 8px;
-}
-
-header nav ul li:hover{
-    background-color: white;
-    box-shadow: 1px 1px 20px black;
-    border-radius: 10px;
-    transform: scale(1.1,1.1);
-}
-
-footer h2{
-    background-color: black;
-    color: white;
-    font-family: 'Raleway', sans-serif;
+    @extend %h1 ;
 }
 
 .escudo{
-    @extend %flex;
+    display: flex;
+  justify-content: center;
+  height: 150px; ;
+  margin: 0px 0px 20px 0px;
 }
 
-header div{
-    display: flex;
-    justify-content: baseline;
+header{
+    grid-area: header;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    justify-self: center;
+    img{
+        max-width: 250px;
+    max-height: 250px;
+    }
+    h2{
+        color: nth($colores, 2);
+        font-family: 'Raleway', sans-serif;
+        background-color: nth($colores, 3);
+        display: flex;
+        justify-content: flex-start;
+    }
+    h3{
+        font-size: 20px;
+    
+    }
+    h4{
+        font-size: 20px;
+    }
+    h5{
+        font-size: 20px;
+    }
+    nav{
+        ul{
+            background-color: nth($colores, 1);
+            color: nth($colores, 2);
+            font-size: 19px;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        li{
+            background-color: nth($colores, 1);
+            padding: 8px;
+        }
+        li:hover{
+            background-color: nth($colores, 2);
+            box-shadow: 1px 1px 20px nth($colores, 3);
+            border-radius: 10px;
+            transform: scale(1.1,1.1);
+        }      
+    }
+    div{
+        display: flex;
+        justify-content: baseline;
+    }
+
+}
+
+footer{
+    grid-area: footer;
+    ul{
+        list-style: none;
+        color: nth($colores, 1);
+        font-size: 17px;
+    }
+    h2{
+        background-color: nth($colores, 3);
+        color: nth($colores, 2);
+        font-family: 'Raleway', sans-serif;
+    }
 }
 
 .titulo{
-    background-color: red;
+    background-color: nth($colores, 1);
     text-align: center;
 }
 
@@ -92,14 +94,9 @@ header div{
     grid-template-areas: "header header header header"
     "main main section section"
     "footer footer footer footer";
-}
-
-header{
-    grid-area: header;
-    justify-content: center;
-    text-align: center;
-    justify-items: center;
-    justify-self: center;
+    header p{
+        font-size: 18px;
+    }
 }
 
 main{
@@ -114,17 +111,8 @@ section{
     justify-self: center;
 }
 
-footer{
-    grid-area: footer;
-}
-
-.estadio header p{
-    font-size: 18px;
-}
-
-
 .tituloh{
-    background-color: red;
+    background-color: nth($colores, 1);
     text-align: center;
 }
 
@@ -136,26 +124,22 @@ footer{
     grid-template-areas: "headerh headerh headerh headerh"
     "mainh mainh sectionh sectionh"
     "footerh footerh footerh footerh";
-}
+    header{
+        grid-area: headerh;
+        p{
+            font-size: 18px;
+        }
+    }
+    main{
+        grid-area: mainh;
+    }
+    section{
+        grid-area: sectionh;
+    }
+    footer{
+        grid-area: footerh;
+    }
 
-.historia header{
-    grid-area: headerh;
-}
-
-.historia main{
-    grid-area: mainh;
-}
-
-.historia section{
-    grid-area: sectionh;
-}
-
-.historia footer{
-    grid-area: footerh;
-}
-
-.historia header p{
-    font-size: 18px;
 }
 
 .socios{
@@ -166,40 +150,71 @@ footer{
     grid-template-areas: "headers headers"
     "mains sections"
     "footers footers";
+    header{
+        grid-area: headers;
+        p{
+            font-size: 18px;
+        }
+        ul{
+            list-style-position: inside;
+            justify-content: flex-start;
+            font-size: 18px;
+        }
+    }
+    main{
+        grid-area: mains;
+        p{
+            font-size: 18px;
+        }
+        h2{
+            background-color: nth($colores, 1);
+        }
+    }
+    section{
+        grid-area: sections;
+    }
+    footer{
+        grid-area: footers;
+    }
 }
 
-.socios header{
-    grid-area: headers;
+.contacto form fieldset legend{
+    background-color: nth($colores, 1);
+    font-size: 20px;
+    font-weight: bold
 }
 
-.socios main{
-    grid-area: mains;
+.contacto form fieldset div{
+    font-size: 17px;
+    font-weight: bold
 }
 
-.socios section{
-    grid-area: sections;
+.deporteuno{
+    @extend %deporteunoydos;
 }
 
-.socios footer{
-    grid-area: footers;
+.deportedos{
+    @extend %deporteunoydos;
 }
 
-.socios header p{
-    font-size: 18px;
+.footerindex{
+    @extend %footers;
 }
 
-.socios main p{
-    font-size: 18px;
+.footercontacto{
+    @extend %footers;
 }
 
-.socios main h2{
-    background-color: red;
+.footerestadio{
+    @extend %footers;
 }
 
-.socios header ul{
-    list-style-position: inside;
-    justify-content: flex-start;
-    font-size: 18px;
+.footerhistoria{
+    @extend %footers;
+}
+
+.footersocios{
+    @extend %footers;
 }
 
 @media screen and (max-width:1024px){
@@ -238,18 +253,6 @@ footer{
 
 }
 
-.contacto form fieldset legend{
-    background-color: red;
-    font-size: 20px;
-    font-weight: bold
-}
-
-.contacto form fieldset div{
-    font-size: 17px;
-    font-weight: bold
-}
-
-
 @media (max-width: 600px) and (min-width: 280px){
     .deporteuno{
         display: flex;
@@ -264,6 +267,7 @@ footer{
         flex-direction: column;
     }
 }    
+
 @media (max-width: 1024px) and (min-width: 600px){
     .deporteuno{
         height: 100vh;
@@ -336,17 +340,4 @@ footer{
 
 .voley{
     grid-area: voley;
-}
-
-legend{
-    @include medidas(1000px, 50px);
-    color: nth($colores, 2);
-}
-
-label{
-    color: nth($colores, 1);
-}
-
-fieldset{
-    background-color: nth($colores, 3);
 }
