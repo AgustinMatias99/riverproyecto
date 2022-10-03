@@ -39,32 +39,32 @@ header{
     h5{
         font-size: 20px;
     }
-    nav{
-        ul{
-            background-color: nth($colores, 1);
-            color: nth($colores, 2);
-            font-size: 19px;
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-        li{
-            background-color: nth($colores, 1);
-            padding: 8px;
-        }
-        li:hover{
-            background-color: nth($colores, 2);
-            box-shadow: 1px 1px 20px nth($colores, 3);
-            border-radius: 10px;
-            transform: scale(1.1,1.1);
-        }      
-    }
+      
     div{
         display: flex;
         justify-content: baseline;
     }
 
+}
+
+nav{
+    padding: 5px;
+    ul{
+        font-size: 19px;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    li{
+        padding: 8px;
+    }
+    li:hover{
+        background-color: nth($colores, 1);
+        box-shadow: 1px 1px 20px nth($colores, 3);
+        border-radius: 10px;
+        transform: scale(1.1,1.1);
+    }
 }
 
 footer{
@@ -82,8 +82,9 @@ footer{
 }
 
 .titulo{
-    background-color: nth($colores, 1);
+    background-color: nth($colores, 3);
     text-align: center;
+    font-size: 40px;
 }
 
 .estadio{
@@ -95,25 +96,32 @@ footer{
     "main main section section"
     "footer footer footer footer";
     header p{
-        font-size: 18px;
+        font-size: 20px;
+        margin: 20px;
+        padding: 20px;
     }
-}
-
-main{
-    grid-area: main;
-    align-self: center;
-    justify-self: center;
-}
-
-section{
-    grid-area: section;
-    align-self: center;
-    justify-self: center;
+    .fotoestadio{
+        grid-area: main;
+        align-self: center;
+        justify-self: center;
+        padding: 5px;
+        margin: 5px;   
+    }
+    
+    section{
+        grid-area: section;
+        align-self: center;
+        justify-self: center;
+        padding: 5px;
+        margin: 5px;  
+    }
+    
 }
 
 .tituloh{
-    background-color: nth($colores, 1);
+    background-color: nth($colores, 3);
     text-align: center;
+    font-size: 40px;
 }
 
 .historia{
@@ -127,14 +135,24 @@ section{
     header{
         grid-area: headerh;
         p{
-            font-size: 18px;
+            font-size: 20px;
+            margin: 20px;
+            padding: 20px;
         }
     }
-    main{
+    .fotohistoria{
         grid-area: mainh;
+        padding: 5px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
     }
     section{
         grid-area: sectionh;
+        padding: 5px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
     }
     footer{
         grid-area: footerh;
@@ -153,18 +171,22 @@ section{
     header{
         grid-area: headers;
         p{
-            font-size: 18px;
+            font-size: 20px;
+            margin: 15px;
+            padding: 15px;
         }
         ul{
             list-style-position: inside;
             justify-content: flex-start;
-            font-size: 18px;
+            font-size: 20px;
+            margin: 5px;
         }
     }
-    main{
+    .valorcuota{
         grid-area: mains;
         p{
-            font-size: 18px;
+            font-size: 20px;
+            margin: 10px;
         }
         h2{
             background-color: nth($colores, 1);

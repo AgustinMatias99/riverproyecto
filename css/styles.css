@@ -38,25 +38,25 @@ header {
     font-size: 20px; }
   header h5 {
     font-size: 20px; }
-  header nav ul {
-    background-color: red;
-    color: white;
+  header div {
+    display: flex;
+    justify-content: baseline; }
+
+nav {
+  padding: 5px; }
+  nav ul {
     font-size: 19px;
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around; }
-  header nav li {
-    background-color: red;
+  nav li {
     padding: 8px; }
-  header nav li:hover {
-    background-color: white;
+  nav li:hover {
+    background-color: red;
     box-shadow: 1px 1px 20px black;
     border-radius: 10px;
     transform: scale(1.1, 1.1); }
-  header div {
-    display: flex;
-    justify-content: baseline; }
 
 footer {
   grid-area: footer; }
@@ -70,8 +70,9 @@ footer {
     font-family: 'Raleway', sans-serif; }
 
 .titulo {
-  background-color: red;
-  text-align: center; }
+  background-color: black;
+  text-align: center;
+  font-size: 40px; }
 
 .estadio {
   height: 100vh;
@@ -80,21 +81,26 @@ footer {
   grid-template-rows: 1fr 1fr 0.5fr;
   grid-template-areas: "header header header header" "main main section section" "footer footer footer footer"; }
   .estadio header p {
-    font-size: 18px; }
-
-main {
-  grid-area: main;
-  align-self: center;
-  justify-self: center; }
-
-section {
-  grid-area: section;
-  align-self: center;
-  justify-self: center; }
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px; }
+  .estadio .fotoestadio {
+    grid-area: main;
+    align-self: center;
+    justify-self: center;
+    padding: 5px;
+    margin: 5px; }
+  .estadio section {
+    grid-area: section;
+    align-self: center;
+    justify-self: center;
+    padding: 5px;
+    margin: 5px; }
 
 .tituloh {
-  background-color: red;
-  text-align: center; }
+  background-color: black;
+  text-align: center;
+  font-size: 40px; }
 
 .historia {
   height: 100vh;
@@ -105,11 +111,21 @@ section {
   .historia header {
     grid-area: headerh; }
     .historia header p {
-      font-size: 18px; }
-  .historia main {
-    grid-area: mainh; }
+      font-size: 20px;
+      margin: 20px;
+      padding: 20px; }
+  .historia .fotohistoria {
+    grid-area: mainh;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center; }
   .historia section {
-    grid-area: sectionh; }
+    grid-area: sectionh;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center; }
   .historia footer {
     grid-area: footerh; }
 
@@ -122,16 +138,20 @@ section {
   .socios header {
     grid-area: headers; }
     .socios header p {
-      font-size: 18px; }
+      font-size: 20px;
+      margin: 15px;
+      padding: 15px; }
     .socios header ul {
       list-style-position: inside;
       justify-content: flex-start;
-      font-size: 18px; }
-  .socios main {
+      font-size: 20px;
+      margin: 5px; }
+  .socios .valorcuota {
     grid-area: mains; }
-    .socios main p {
-      font-size: 18px; }
-    .socios main h2 {
+    .socios .valorcuota p {
+      font-size: 20px;
+      margin: 10px; }
+    .socios .valorcuota h2 {
       background-color: red; }
   .socios section {
     grid-area: sections; }
